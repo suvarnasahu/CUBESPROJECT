@@ -114,7 +114,10 @@ def send_email(values):
     sender_password = 'rpjjugyqwcsszlkk'
     receiver_email = values['bsu_email']
     email_subject = 'Thankyou for claiming the Cubes Project'
-    message = f"Subject: {email_subject}\n\nHi {values['first_name']},\n\nThanks for submitting your information. Here are the details we received:\n\nBSU Email: {values['bsu_email']}\nFirst Name: {values['first_name']}\nLast Name: {values['last_name']}\nTitle: {values['title']}\nDepartment: {values['department']}\n\nRegards,\nSuvarna Sahu"
+    message = f"Subject: {email_subject}\n\nHi {values['first_name']},\n\nThanks for submitting your " \
+              f"information. Here are the details we received:\n\nBSU Email: {values['bsu_email']}\nFi" \
+              f"rst Name: {values['first_name']}\nLast Name: {values['last_name']}\nTitle: " \
+              f"{values['title']}\nDepartment: {values['department']}\n\nRegards,\nSuvarna Sahu"
     print(message)
     smtp = smtplib.SMTP('smtp.gmail.com', 587)
     smtp.ehlo()
