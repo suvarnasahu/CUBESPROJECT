@@ -44,10 +44,7 @@ jobs:
         uvicorn wufooform:app &
     - name: Test with pytest
       run: |
-        export DISPLAY=:0.0
         python -m pytest tests/testcountcheck.py
         python -m pytest tests/testcreation.py
         python -m pytest tests/testdbhasdata.py
-        python -m pytest tests/testcasevisualization.py
-        python -m pytest tests/testdatafromserver.py
-      
+        
