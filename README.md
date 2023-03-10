@@ -256,7 +256,7 @@ TEST CASES
 
 
 
-testdatabasehasdata.py-.this file queries the database, and the assert function makes sure the result is none.
+testdbhasdata.py-.this file queries the database, and the assert function makes sure the result is none.
 
 
 
@@ -275,7 +275,7 @@ testdatafromserver.py->here the request.get function retrieves data from server 
 
 
 
-testguidata.py->this test case checks if the first name, last name and prefix field is populated correctly and also checks if the checkbox is checked.
+testgui.py->this test case checks if the first name, last name and prefix field is populated correctly and also checks if the checkbox is checked.
 
 
 
@@ -304,7 +304,7 @@ uvicorn~=0.20.0
 PySimpleGUI~=4.60.4
 
 TEST CASES
-testcasesprint4.py-
+testcasevisualization.py
 Test case 1: Create new user
 Test case 2: Check existing user
 Test case 3: Populate data for existing user
