@@ -1,37 +1,23 @@
-"""
-Check for user creation and correct data for first name, lat name, title and department are fetched from table
-"""
-
 import sqlite3
 
 # Define database connection
 conn = sqlite3.connect('wufuform.db')
 c = conn.cursor()
 
-# Create test user
-c.execute('DELETE FROM FACULTY WHERE bsu_email = "ssahu@student.bridgew.edu"')  # delete user if already exists
+# Test case 1: Create new user
+c.execute('DELETE FROM FACULTY WHERE bsu_email = "testemail@gmail.com"')  # delete user if already exists
+c.execute('INSERT INTO FACULTY VALUES (?, ?, ?, ?, ?)', ('testemail@gmail.com', 'test', 'email', 'Mrs', 'BSU'))
 conn.commit()
-c.execute('INSERT INTO FACULTY(bsu_email, first_name, last_name, title, department) VALUES (?, ?, ?, ?, ?)',
-          ('ssahu@student.bridgew.edu', 'Suvarna', 'Sahu', 'Mrs', 'BSU'))
-conn.commit()
+print("testcase1success")
 
-# Test case: Populate data for existing user
-c.execute('SELECT * FROM FACULTY WHERE bsu_email = "ssahu@student.bridgew.edu"')
+# Test case 2: Check existing user
+c.execute('SELECT * FROM FACULTY WHERE bsu_email = "testemail@gmail.com"')
 result = c.fetchone()
 if result:
-    # If user already exists, populate the rest of the data
-    first_name = result[1]
-    last_name = result[2]
-    title = result[3]
-    department = result[4]
-
-    # Check that the data was populated correctly
-    assert first_name == 'Suvarna'
-    assert last_name == 'Sahu'
-    assert title == 'Mrs'
-    assert department == 'BSU'
-else:
-    print('User not found in database.')
-print("test successfull")
-# Close database connection
+    assert result[1] == 'test'
+    assert result[2] == 'email'
+    assert result[3] == 'Mrs'
+    assert result[4] == 'BSU'
+    c.execute('DELETE FROM FACULTY WHERE bsu_email = "testemail@gmail.com"')  
+    conn.commit()
 conn.close()
