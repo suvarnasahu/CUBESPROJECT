@@ -12,6 +12,5 @@ if result:
     assert result[2] == 'Sahu'
     assert result[3] == 'Mrs'
     assert result[4] == 'BSU'
-    
 conn.close()
 print("Success")
