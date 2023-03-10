@@ -150,14 +150,6 @@ populatetable(conn):
 
 
 
-
-"queries.py"= file is used to serve querying on the database without any API call.
-
-
-
-
-
-
 SERVER TO FETCH ENTRIES FROM DATABASE.
 
 I have used FASTAPI and Uvicorn Server
@@ -302,9 +294,10 @@ APScheduler~=3.10.0
 fastapi~=0.90.1
 uvicorn~=0.20.0
 PySimpleGUI~=4.60.4
+httpx~=0.23.3
 
 TEST CASES
 testcasevisualization.py
-Test case 1: Create new user
-Test case 2: Check existing user
-Test case 3: Populate data for existing user
+testsvisualizationexistinguser.py
+testfacultydatabase.py
+Create new user,Check existing user,Populate data for existing user,test the faculty table.
