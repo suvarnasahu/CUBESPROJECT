@@ -18,6 +18,6 @@ if result:
     assert result[2] == 'email'
     assert result[3] == 'Mrs'
     assert result[4] == 'BSU'
-    c.execute('DELETE FROM FACULTY WHERE bsu_email = "testemail@gmail.com"')  
+    c.execute('DELETE FROM FACULTY WHERE bsu_email = "testemail@gmail.com"')
     conn.commit()
 conn.close()
