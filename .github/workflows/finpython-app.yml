@@ -47,5 +47,5 @@ jobs:
         python -m pytest tests/testcountcheck.py
         python -m pytest tests/testcreation.py
         python -m pytest tests/testdbhasdata.py
-        python -m pytest tests/test_fastapi.py
+        python -m pytest tests/testdatafromserver.py
         
