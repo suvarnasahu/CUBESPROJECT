@@ -5,3 +5,4 @@ fastapi~=0.90.1
 uvicorn~=0.20.0
 PySimpleGUI~=4.60.4
 urllib3~=1.26.14
+httpx~=0.23.3
