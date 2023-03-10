@@ -34,5 +34,4 @@ else:
     print('User not found in database.')
 print("test successfull")
 # Close database connection
-c.close()
 conn.close()
