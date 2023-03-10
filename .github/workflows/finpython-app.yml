@@ -49,5 +49,4 @@ jobs:
         python -m pytest tests/testdbhasdata.py
         python -m pytest tests/testdatafromserver.py
         python -m pytest tests/testsvisualizationexistinguser.py
-        
-        
+      
