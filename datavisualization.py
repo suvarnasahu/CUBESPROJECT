@@ -110,8 +110,8 @@ def claimentryproject(conn, entryid, bsu_email):
 
 
 def send_email(values):
-    sender_email = 'sssuvarna.sahu@gmail.com'
-    sender_password = 'rpjjugyqwcsszlkk'
+    sender_email = 'shardakabiraj.sahu@gmail.com'
+    sender_password = 'zygsreugzqrxiscg'
     receiver_email = values['bsu_email']
     email_subject = 'Thankyou for claiming the Cubes Project'
     message = f"Subject: {email_subject}\n\nHi {values['first_name']},\n\nThanks for submitting your " \
